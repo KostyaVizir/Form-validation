@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Форма с валидацией</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Форма сбора данных</h1>
+		<form role="form">
+			<div class="form-group required">
+				<label class="control-label" for="email">Почта (будет использована как логин)<sup>*</sup></label>
+				<input class="form-control" id="email" placeholder="Почта" type="text">
+			</div>
+
+			<!-- Same as above, but in error state and message -->
+			<!-- <div class="form-group has-error">
+				<label class="control-label" for="email">Почта (будет использована как логин)<sup>*</sup></label>
+				<input class="form-control" id="email" placeholder="Почта" type="text">
+				<div class="alert alert-danger">Важное сообщение об ошибке</div>
+			</div> -->
+
+			<div class="form-group required">
+				<label for="password">Пароль (постарайся придумать посложнее)<sup>*</sup></label>
+				<input class="form-control" id="password" placeholder="Пароль" type="password">
+			</div>
+
+			<div class="form-group">
+				<label for="city">Город проживания (указывать не обязательно)</label>
+				<input class="form-control" id="city" placeholder="Город" type="text">
+			</div>
+
+			<div class="form-group">
+				<label for="phone">Телефон (указывать не обязательно)</label>
+				<input class="form-control" id="phone" placeholder="Номер телефона в международном формате например +380509993322" type="text">
+			</div>
+
+			<div class="form-group required">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox"> Согласен со <a href="/">всем</a> *
+					</label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<!-- Example of disabled button -->
+				<!-- <button type="submit" class="btn btn-primary disabled">Отправить данные</button> -->
+				<button type="submit" class="btn btn-primary disabled">Отправить данные</button>
+			</div>
+		</form>
+	</div>
+	<script src="js/validate.js"></script>
+</body>
+</html>
